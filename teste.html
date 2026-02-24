@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Aula Prática de HTML com Estilo</title>
+
+    <!-- CSS interno para estilos -->
+    <style>
+        /* Cor de fundo da página */
+        body {
+            background-color: #f0f8ff; /* azul clarinho */
+            font-family: Arial, sans-serif; /* fonte da página */
+            margin: 20px;
+        }
+
+        /* Título principal */
+        h1 {
+            color: #ff4500; /* laranja */
+            font-size: 36px; /* tamanho da letra */
+            text-align: center; /* centralizado */
+        }
+
+        /* Subtítulo */
+        h2 {
+            color: #2e8b57; /* verde */
+            font-size: 28px;
+        }
+
+        /* Parágrafos */
+        p {
+            color: #333333; /* cinza escuro */
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Container para imagem + texto lado a lado */
+        .lado-a-lado {
+            display: flex; /* coloca elementos lado a lado */
+            align-items: center; /* alinha verticalmente */
+            margin-bottom: 20px; /* espaço abaixo */
+        }
+
+        /* Imagem dentro do container */
+        .lado-a-lado img {
+            width: 150px; /* tamanho da imagem */
+            margin-right: 15px; /* espaço entre imagem e texto */
+            border-radius: 10px; /* cantos arredondados */
+        }
+
+        /* Texto dentro do container */
+        .lado-a-lado p {
+            margin: 0; /* remove margem extra */
+        }
+
+        button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #011222;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-4px)
+             scale(1.05);
+  box-shadow: 0 10px 30px
+    rgba(0, 0, 0, 0.4);
+
+}
+
+    .card {
+    background: rgba(255, 255, 255, 0.048);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+h1 {
+      animation: aparecer 1.5s ease forwards;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* degradê moderno */
+    border-radius: 15px;       /* cantos arredondados */
+    padding: 20px;             /* espaço interno */
+    margin: 20px 0;            /* espaço entre os cards */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);      /* sobe ao passar o mouse */
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2); /* sombra mais forte */
+}
+   
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Desenvolvimento Web</h1>
+
+    <hr>
+
+    <!-- Seção com imagem e texto lado a lado -->
+    <div class="lado-a-lado card">
+        <img src="oip.webp" alt="Exemplo de imagem 1">
+        <p>
+            Desde 1946, o Senac é o principal agente de educação profissional voltado para o Comércio de Bens, Serviços e Turismo do País.
+        </p>
+    </div>
+
+    <!-- Outra seção de imagem + texto -->
+    <div class="lado-a-lado card">
+        <img src="senac.webp" alt="Exemplo de imagem 2">
+        <p>
+            Fique por dentro das profissões do futuro: cursos do Senac que já preparam para elas
+        </p>
+    </div>
+
+    <hr>
+
+    <h2>Conclusão</h2>
+    <p>
+        Aprendemos a:
+        <ul>
+            <li>Mudar cores de fundo e texto</li>
+            <li>Ajustar tamanho das letras</li>
+            <li>Colocar texto ao lado das imagens</li>
+            <li>Usar HTML e CSS internos no mesmo arquivo</li>
+        </ul>
+    </p>
+
+</body>
+</html>
